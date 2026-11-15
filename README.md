@@ -5,7 +5,7 @@
 ## 开始
 
 1. 在 GitHub 上点 Use this template 新建仓库，仓库名就是模块标识（小写字母、数字、`_`、`-`，最长 32 个字符）。
-2. 改 `manifest.json`：`id` 改成仓库名，填 `name`、`description`、`hosts`（模块允许请求的域名）和 `capabilities`。
+2. 改 `manifest.json`：`id` 改成仓库名，填 `name`、`description`、`adult`（是否限制级内容）、`hosts`（模块允许请求的域名）和 `capabilities`。
 3. 改 `main.js`。清单字段、导出函数和宿主接口见 [guoapp 开发指南的「站源模块」](https://github.com/Xanerix/guoapp/blob/main/DEVELOPMENT.md#站源模块)。
 4. 本机调试：把模块文件夹放进应用数据目录的 `modules/` 下，或在 guoapp 的 `native` 目录执行 `go run ./cmd/moduletool <模块目录> <请求 JSON>`。
 
