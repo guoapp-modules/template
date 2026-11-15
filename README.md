@@ -19,4 +19,4 @@
 
 ## 上架
 
-模块要出现在应用内的模块商店，需在 [index](https://github.com/guoapp-modules/index) 登记，规则见那里的说明。未上架的模块仍可用 Release 里的 zip 或其地址手动安装。
+模块要出现在应用内的模块商店，需在 [index](https://github.com/guoapp-modules/index) 申请，审核通过后转入 guoapp-modules 组织再上架，流程见那里的说明。未上架的模块仍可用 Release 里的 zip 或其地址手动安装。
