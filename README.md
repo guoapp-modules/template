@@ -74,7 +74,7 @@
 | `playlist` | m3u8 文本；站点的播放列表要自己处理时，把改好的文本放这里，`url` 作为相对地址的基准 |
 | `hlsKey` | HLS 的 16 字节 AES 密钥，Base64 字符串，替换播放列表里 `EXT-X-KEY` 指向的密钥 |
 | `cencKey` | CENC 加密 mp4 的密钥，Base64 字符串 |
-| `credentials` | 请求视频时附加的 `{ cookie, origin, referer, userAgent, expiresMs }`；`expiresMs` 是过期时刻的毫秒时间戳，过期后这组地址作废，需要重新解析播放 |
+| `credentials` | 请求视频时附加的 `{ cookie, origin, referer, userAgent, expiresMs, omitFetchMetadata }`；`expiresMs` 是过期时刻的毫秒时间戳，过期后这组地址作废，需要重新解析播放；`omitFetchMetadata` 为 `true` 时请求视频不带 `Sec-Fetch-Mode`、`Sec-Fetch-Dest`，用于见到这两个头就断开连接的 CDN |
 | `variants` | 其他线路或清晰度，数组，每项字段同上 |
 
 多线路：把所有地址放进 `variants`，同一清晰度可以有多条。应用按地址去重，按 `quality` 从高到低排序，同一清晰度保持原顺序；当前线路播放失败时自动换下一条。不同的 `quality` 会出现在清晰度菜单里，用户选定清晰度后只在该清晰度的线路之间切换。
